@@ -154,7 +154,8 @@ class Check:
             result.passed, result.message = False, str(exc)
             return result
         details: dict[str, Any] = {}
-        if isinstance(out, tuple):
+        own_details = isinstance(out, tuple)  # (reasons, details): the check counts for itself
+        if own_details:
             out, details = out
         if isinstance(out, dict):  # a table check that counted for itself
             result.failed, result.total = out["failed"], out["total"]
@@ -164,7 +165,7 @@ class Check:
         else:
             source = values if values is not None else frame
             _fill_from_series(result, out, source, ctx)
-            if out.dtype == object:
+            if out.dtype == object and not own_details:
                 counts = out[out.astype(bool)].str.split("; ").explode().value_counts()
                 details = {**{k: int(v) for k, v in counts.items()}, **details}
         result.details = details
