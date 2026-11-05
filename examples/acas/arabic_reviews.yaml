@@ -1,0 +1,16 @@
+# Checks for the labelled Arabic reviews that ACAS evaluates its comment analyzer on
+# (github.com/Ifazawezk/ACAS, tools/evaluate_analyzer.py). The files are downloaded
+# into advanced_comment_analysis/data/eval and not stored in either repository.
+# Works for arabic-prod/PROD.csv and arabic-res/RES1.csv.
+dataset: ACAS Arabic reviews
+columns:
+  text:
+    - not_null
+    - unique: {name: duplicate comments, severity: warn}
+    - unique: {normalize: true, name: duplicates after normalising, severity: warn}
+    - script: {expect: arabic, min_share: 0.5}
+    - arabic_text: {severity: warn}
+  polarity:
+    - not_null
+    - allowed: [-1, 0, 1]
+    - one_value_per: {key: text, name: one label per comment}

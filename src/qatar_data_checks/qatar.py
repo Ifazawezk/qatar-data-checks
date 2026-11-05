@@ -89,7 +89,7 @@ def phone_kind(value, country_code: str = "optional", arabic_digits: bool = Fals
         return "mobile", ""
     if text[0] == "4":
         return "landline", ""
-    return None, f"starts with {text[0]}, not a mobile (3, 5, 6, 7) or landline (4) prefix"
+    return None, f"prefix {text[0]} is not used for mobile (3, 5, 6, 7) or landline (4)"
 
 
 def qar_problem(value, decimals=2, negative=False, currency=True, arabic_digits=False) -> str:

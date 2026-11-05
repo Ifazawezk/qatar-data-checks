@@ -1,0 +1,33 @@
+# Checks for the article corpus of qanun, a bilingual RAG over Qatar labour law
+# (github.com/Ifazawezk/qanun, data/corpus/articles.jsonl). laws.json is looked
+# up next to the data file.
+dataset: qanun articles
+table:
+  - row_count: {min: 1}
+  - rule: {expr: "id == law.str.cat(label, sep=':')", name: id is law and label}
+columns:
+  id: [not_null, unique]
+  law:
+    - not_null
+    - references: {path: laws.json, column: key}
+  label:
+    - unique: {with_columns: [law]}
+  kind:
+    - allowed: [article, issuance]
+  status:
+    - allowed: [in_force, repealed]
+  text_ar:
+    - not_null
+    - length: {min: 15, name: no empty articles}
+    - script: arabic
+    - arabic_text: {severity: warn}
+  text_en:
+    - not_null
+    - script: latin
+  title_ar:
+    - not_null
+    - arabic_text: {severity: warn}
+  effective_date:
+    - range: {min: 1971-09-03, max: 2026-12-31}
+  source_url:
+    - regex: 'https://almeezan[.]qa/.+'

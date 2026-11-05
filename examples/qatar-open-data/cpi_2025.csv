@@ -1,0 +1,157 @@
+year,month,lshhr,group_code,group,lmjmw,cpi_index
+2025,Jan,يناير,003,Clothing and foot ware,الملابس والأحذية,90.49
+2025,Jan,يناير,007,Transport,النقل,111.51
+2025,Jan,يناير,008,Communication,الاتصالات,110.02
+2025,Jan,يناير,009,Recreation and culture services,التسلية والثقافة,128.33
+2025,Jan,يناير,011,Resturant and hotels,المطاعم والفنادق,108.05
+2025,Jan,يناير,012,Miscellaneous gooda and services,السلع والخدمات  الأخرى,118.37
+2025,Feb,فبراير,003,Clothing and foot ware,الملابس والأحذية,91.84
+2025,Feb,فبراير,008,Communication,الاتصالات,109.65
+2025,Feb,فبراير,009,Recreation and culture services,التسلية والثقافة,127.52
+2025,Feb,فبراير,011,Resturant and hotels,المطاعم والفنادق,107.77
+2025,Feb,فبراير,012,Miscellaneous gooda and services,السلع والخدمات  الأخرى,120.43
+2025,Mar,مارس,003,Clothing and foot ware,الملابس والأحذية,91.41
+2025,Mar,مارس,005,"Furnishing, household equipment and rouitin housholds maintainance",الأثاث والمنسوجات والأجهزة المنزلية,103.48
+2025,Mar,مارس,007,Transport,النقل,111.75
+2025,Mar,مارس,010,Education,التعليم,121.31
+2025,Apr,أبريل,0,CPI- General Index,الرقم القياسي العام,107.79
+2025,Apr,أبريل,001,Food  and Beverages,الغذاء والمشروبات,108.65
+2025,Apr,أبريل,003,Clothing and foot ware,الملابس والأحذية,91.23
+2025,Apr,أبريل,004,"Housing, water, electricity, gas, and other fuels",السكن والمياه والكهرباء والغاز وأنواع الوقود الأخرى,91.38
+2025,Apr,أبريل,006,Health,الصحة,96.99
+2025,Apr,أبريل,009,Recreation and culture services,التسلية والثقافة,127.28
+2025,Apr,أبريل,011,Resturant and hotels,المطاعم والفنادق,104.67
+2025,May,مايو,0,CPI- General Index,الرقم القياسي العام,107.68
+2025,May,مايو,003,Clothing and foot ware,الملابس والأحذية,90.92
+2025,Jun,يونيو,0,CPI- General Index,الرقم القياسي العام,107.74
+2025,Jun,يونيو,004,"Housing, water, electricity, gas, and other fuels",السكن والمياه والكهرباء والغاز وأنواع الوقود الأخرى,91.04
+2025,Jun,يونيو,005,"Furnishing, household equipment and rouitin housholds maintainance",الأثاث والمنسوجات والأجهزة المنزلية,105.44
+2025,Jun,يونيو,006,Health,الصحة,96.99
+2025,Jun,يونيو,008,Communication,الاتصالات,109.57
+2025,Jul,يوليو,001,Food  and Beverages,الغذاء والمشروبات,110.4
+2025,Jul,يوليو,002,Tobacco,التبغ,246.0
+2025,Jul,يوليو,005,"Furnishing, household equipment and rouitin housholds maintainance",الأثاث والمنسوجات والأجهزة المنزلية,105.91
+2025,Jul,يوليو,009,Recreation and culture services,التسلية والثقافة,129.76
+2025,Jul,يوليو,012,Miscellaneous gooda and services,السلع والخدمات  الأخرى,124.26
+2025,Aug,أغسطس,001,Food  and Beverages,الغذاء والمشروبات,111.85
+2025,Aug,أغسطس,002,Tobacco,التبغ,246.0
+2025,Aug,أغسطس,007,Transport,النقل,110.65
+2025,Aug,أغسطس,008,Communication,الاتصالات,109.78
+2025,Sep,سبتمبر,001,Food  and Beverages,الغذاء والمشروبات,110.74
+2025,Sep,سبتمبر,006,Health,الصحة,96.71
+2025,Sep,سبتمبر,007,Transport,النقل,110.47
+2025,Sep,سبتمبر,008,Communication,الاتصالات,110.06
+2025,Oct,أكتوبر,0,CPI- General Index,الرقم القياسي العام,110.41
+2025,Oct,أكتوبر,002,Tobacco,التبغ,246.0
+2025,Oct,أكتوبر,007,Transport,النقل,110.57
+2025,Oct,أكتوبر,008,Communication,الاتصالات,109.97
+2025,Oct,أكتوبر,012,Miscellaneous gooda and services,السلع والخدمات  الأخرى,134.92
+2025,Nov,نوفمبر,0,CPI- General Index,الرقم القياسي العام,110.8
+2025,Nov,نوفمبر,002,Tobacco,التبغ,246.0
+2025,Dec,ديسمبر,006,Health,الصحة,96.74
+2025,Dec,ديسمبر,009,Recreation and culture services,التسلية والثقافة,152.92
+2025,Jan,يناير,0,CPI- General Index,الرقم القياسي العام,107.45
+2025,Jan,يناير,002,Tobacco,التبغ,246.0
+2025,Jan,يناير,004,"Housing, water, electricity, gas, and other fuels",السكن والمياه والكهرباء والغاز وأنواع الوقود الأخرى,91.43
+2025,Jan,يناير,005,"Furnishing, household equipment and rouitin housholds maintainance",الأثاث والمنسوجات والأجهزة المنزلية,103.66
+2025,Feb,فبراير,0,CPI- General Index,الرقم القياسي العام,107.89
+2025,Feb,فبراير,001,Food  and Beverages,الغذاء والمشروبات,108.36
+2025,Feb,فبراير,005,"Furnishing, household equipment and rouitin housholds maintainance",الأثاث والمنسوجات والأجهزة المنزلية,103.58
+2025,Feb,فبراير,007,Transport,النقل,112.03
+2025,Mar,مارس,004,"Housing, water, electricity, gas, and other fuels",السكن والمياه والكهرباء والغاز وأنواع الوقود الأخرى,91.12
+2025,Mar,مارس,006,Health,الصحة,98.36
+2025,Mar,مارس,008,Communication,الاتصالات,104.93
+2025,Mar,مارس,009,Recreation and culture services,التسلية والثقافة,123.44
+2025,Mar,مارس,012,Miscellaneous gooda and services,السلع والخدمات  الأخرى,121.53
+2025,Apr,أبريل,002,Tobacco,التبغ,246.0
+2025,Apr,أبريل,005,"Furnishing, household equipment and rouitin housholds maintainance",الأثاث والمنسوجات والأجهزة المنزلية,105.4
+2025,Apr,أبريل,008,Communication,الاتصالات,109.55
+2025,Apr,أبريل,010,Education,التعليم,121.28
+2025,May,مايو,002,Tobacco,التبغ,246.0
+2025,May,مايو,005,"Furnishing, household equipment and rouitin housholds maintainance",الأثاث والمنسوجات والأجهزة المنزلية,105.4
+2025,May,مايو,006,Health,الصحة,96.99
+2025,May,مايو,007,Transport,النقل,109.93
+2025,May,مايو,008,Communication,الاتصالات,109.79
+2025,May,مايو,009,Recreation and culture services,التسلية والثقافة,128.91
+2025,May,مايو,011,Resturant and hotels,المطاعم والفنادق,104.32
+2025,May,مايو,012,Miscellaneous gooda and services,السلع والخدمات  الأخرى,125.46
+2025,Jun,يونيو,001,Food  and Beverages,الغذاء والمشروبات,109.43
+2025,Jun,يونيو,002,Tobacco,التبغ,246.0
+2025,Jun,يونيو,003,Clothing and foot ware,الملابس والأحذية,91.66
+2025,Jun,يونيو,009,Recreation and culture services,التسلية والثقافة,128.1
+2025,Jun,يونيو,011,Resturant and hotels,المطاعم والفنادق,104.39
+2025,Jun,يونيو,012,Miscellaneous gooda and services,السلع والخدمات  الأخرى,126.03
+2025,Jul,يوليو,0,CPI- General Index,الرقم القياسي العام,108.0
+2025,Jul,يوليو,003,Clothing and foot ware,الملابس والأحذية,90.7
+2025,Jul,يوليو,007,Transport,النقل,110.32
+2025,Jul,يوليو,010,Education,التعليم,121.3
+2025,Jul,يوليو,011,Resturant and hotels,المطاعم والفنادق,104.6
+2025,Aug,أغسطس,003,Clothing and foot ware,الملابس والأحذية,91.99
+2025,Aug,أغسطس,004,"Housing, water, electricity, gas, and other fuels",السكن والمياه والكهرباء والغاز وأنواع الوقود الأخرى,91.04
+2025,Aug,أغسطس,010,Education,التعليم,121.3
+2025,Aug,أغسطس,011,Resturant and hotels,المطاعم والفنادق,104.46
+2025,Aug,أغسطس,012,Miscellaneous gooda and services,السلع والخدمات  الأخرى,125.05
+2025,Sep,سبتمبر,0,CPI- General Index,الرقم القياسي العام,109.43
+2025,Sep,سبتمبر,002,Tobacco,التبغ,246.0
+2025,Sep,سبتمبر,005,"Furnishing, household equipment and rouitin housholds maintainance",الأثاث والمنسوجات والأجهزة المنزلية,105.92
+2025,Oct,أكتوبر,001,Food  and Beverages,الغذاء والمشروبات,110.45
+2025,Oct,أكتوبر,004,"Housing, water, electricity, gas, and other fuels",السكن والمياه والكهرباء والغاز وأنواع الوقود الأخرى,92.56
+2025,Oct,أكتوبر,005,"Furnishing, household equipment and rouitin housholds maintainance",الأثاث والمنسوجات والأجهزة المنزلية,105.93
+2025,Oct,أكتوبر,006,Health,الصحة,96.74
+2025,Oct,أكتوبر,011,Resturant and hotels,المطاعم والفنادق,104.67
+2025,Nov,نوفمبر,001,Food  and Beverages,الغذاء والمشروبات,110.84
+2025,Nov,نوفمبر,003,Clothing and foot ware,الملابس والأحذية,93.69
+2025,Nov,نوفمبر,004,"Housing, water, electricity, gas, and other fuels",السكن والمياه والكهرباء والغاز وأنواع الوقود الأخرى,92.56
+2025,Nov,نوفمبر,005,"Furnishing, household equipment and rouitin housholds maintainance",الأثاث والمنسوجات والأجهزة المنزلية,105.91
+2025,Nov,نوفمبر,006,Health,الصحة,96.74
+2025,Nov,نوفمبر,007,Transport,النقل,109.59
+2025,Nov,نوفمبر,008,Communication,الاتصالات,109.73
+2025,Nov,نوفمبر,012,Miscellaneous gooda and services,السلع والخدمات  الأخرى,135.29
+2025,Dec,ديسمبر,001,Food  and Beverages,الغذاء والمشروبات,111.05
+2025,Dec,ديسمبر,002,Tobacco,التبغ,246.0
+2025,Dec,ديسمبر,005,"Furnishing, household equipment and rouitin housholds maintainance",الأثاث والمنسوجات والأجهزة المنزلية,105.91
+2025,Dec,ديسمبر,008,Communication,الاتصالات,110.11
+2025,Dec,ديسمبر,010,Education,التعليم,123.75
+2025,Jan,يناير,001,Food  and Beverages,الغذاء والمشروبات,107.32
+2025,Jan,يناير,006,Health,الصحة,98.36
+2025,Jan,يناير,010,Education,التعليم,121.3
+2025,Feb,فبراير,002,Tobacco,التبغ,246.0
+2025,Feb,فبراير,004,"Housing, water, electricity, gas, and other fuels",السكن والمياه والكهرباء والغاز وأنواع الوقود الأخرى,92.18
+2025,Feb,فبراير,006,Health,الصحة,98.36
+2025,Feb,فبراير,010,Education,التعليم,121.34
+2025,Mar,مارس,0,CPI- General Index,الرقم القياسي العام,106.98
+2025,Mar,مارس,001,Food  and Beverages,الغذاء والمشروبات,108.7
+2025,Mar,مارس,002,Tobacco,التبغ,246.0
+2025,Mar,مارس,011,Resturant and hotels,المطاعم والفنادق,107.63
+2025,Apr,أبريل,007,Transport,النقل,111.54
+2025,Apr,أبريل,012,Miscellaneous gooda and services,السلع والخدمات  الأخرى,125.2
+2025,May,مايو,001,Food  and Beverages,الغذاء والمشروبات,109.36
+2025,May,مايو,004,"Housing, water, electricity, gas, and other fuels",السكن والمياه والكهرباء والغاز وأنواع الوقود الأخرى,90.73
+2025,May,مايو,010,Education,التعليم,121.29
+2025,Jun,يونيو,007,Transport,النقل,110.0
+2025,Jun,يونيو,010,Education,التعليم,121.29
+2025,Jul,يوليو,004,"Housing, water, electricity, gas, and other fuels",السكن والمياه والكهرباء والغاز وأنواع الوقود الأخرى,91.04
+2025,Jul,يوليو,006,Health,الصحة,96.71
+2025,Jul,يوليو,008,Communication,الاتصالات,109.69
+2025,Aug,أغسطس,0,CPI- General Index,الرقم القياسي العام,108.45
+2025,Aug,أغسطس,005,"Furnishing, household equipment and rouitin housholds maintainance",الأثاث والمنسوجات والأجهزة المنزلية,105.92
+2025,Aug,أغسطس,006,Health,الصحة,96.71
+2025,Aug,أغسطس,009,Recreation and culture services,التسلية والثقافة,130.58
+2025,Sep,سبتمبر,003,Clothing and foot ware,الملابس والأحذية,93.41
+2025,Sep,سبتمبر,004,"Housing, water, electricity, gas, and other fuels",السكن والمياه والكهرباء والغاز وأنواع الوقود الأخرى,91.8
+2025,Sep,سبتمبر,009,Recreation and culture services,التسلية والثقافة,135.48
+2025,Sep,سبتمبر,010,Education,التعليم,123.78
+2025,Sep,سبتمبر,011,Resturant and hotels,المطاعم والفنادق,104.46
+2025,Sep,سبتمبر,012,Miscellaneous gooda and services,السلع والخدمات  الأخرى,128.79
+2025,Oct,أكتوبر,003,Clothing and foot ware,الملابس والأحذية,93.39
+2025,Oct,أكتوبر,009,Recreation and culture services,التسلية والثقافة,139.86
+2025,Oct,أكتوبر,010,Education,التعليم,123.78
+2025,Nov,نوفمبر,009,Recreation and culture services,التسلية والثقافة,143.13
+2025,Nov,نوفمبر,010,Education,التعليم,123.78
+2025,Nov,نوفمبر,011,Resturant and hotels,المطاعم والفنادق,106.13
+2025,Dec,ديسمبر,0,CPI- General Index,الرقم القياسي العام,112.39
+2025,Dec,ديسمبر,003,Clothing and foot ware,الملابس والأحذية,94.52
+2025,Dec,ديسمبر,004,"Housing, water, electricity, gas, and other fuels",السكن والمياه والكهرباء والغاز وأنواع الوقود الأخرى,92.7
+2025,Dec,ديسمبر,007,Transport,النقل,110.37
+2025,Dec,ديسمبر,011,Resturant and hotels,المطاعم والفنادق,107.94
+2025,Dec,ديسمبر,012,Miscellaneous gooda and services,السلع والخدمات  الأخرى,137.82

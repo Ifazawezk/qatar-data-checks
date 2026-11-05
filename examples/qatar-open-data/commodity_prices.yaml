@@ -1,0 +1,26 @@
+# Average consumer prices of selected commodities in Qatar, 2017 to 2023.
+# Qatar Open Data Portal (data.gov.qa), National Planning Council, CC BY 4.0,
+# downloaded 2026-11-04 with fetch.py. The portal transliterates Arabic headers:
+# lfy is the Arabic category, lsl the Arabic commodity name, whd_lqys the Arabic unit.
+dataset: Qatar commodity prices (data.gov.qa)
+table:
+  - row_count: {min: 1}
+columns:
+  year:
+    - range: {min: 2017, max: 2023}
+  commodity:
+    - not_null
+    - unique: {with_columns: [year], name: one price per commodity and year}
+  lfy:
+    - script: arabic
+    - one_value_per: {key: category, name: one Arabic name per category}
+    - one_value_per: {key: category, normalize: true, name: same after normalising}
+    - arabic_text: {severity: warn}
+  lsl:
+    - script: arabic
+    - one_value_per: {key: commodity, name: one Arabic name per commodity}
+    - one_value_per: {key: commodity, normalize: true, name: same after normalising}
+    - arabic_text: {severity: warn}
+  average_price_qr:
+    - range: {min: 0, exclusive: true}
+    - qar_amount: {decimals: 3}  # yearly averages carry a third decimal

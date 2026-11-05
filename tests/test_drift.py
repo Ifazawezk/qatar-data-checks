@@ -45,7 +45,7 @@ def test_shift_is_major_and_ks_matches_known_case():
     basket = report.columns[0]
     assert basket.status == "major" and basket.p_value < 1e-6
     assert report.exit_code() == 1
-    small = compare(pd.DataFrame({"x": [1.0, 2, 3]}), pd.DataFrame({"x": [4.0, 5, 6]})).columns[0]
+    small = compare(pd.DataFrame({"x": np.arange(1.0, 21)}), pd.DataFrame({"x": np.arange(21.0, 41)})).columns[0]
     assert small.statistic == 1.0  # disjoint samples: KS D = 1
 
 
@@ -55,6 +55,11 @@ def test_chi_square_known_table():
     col = compare(ref, cur).columns[0]
     # expected count 15 in every cell: 4 * 25 / 15 = 6.667 on 1 degree of freedom, p = 0.0098
     assert col.statistic == pytest.approx(20 / 3) and col.p_value == pytest.approx(0.009823, abs=1e-5)
+
+
+def test_few_numbers_compared_as_categories():
+    col = compare(pd.DataFrame({"year": [2024] * 50}), pd.DataFrame({"year": [2025] * 50})).columns[0]
+    assert col.kind == "categorical" and col.status == "major"
 
 
 def test_arabic_categories_and_ids_skipped():

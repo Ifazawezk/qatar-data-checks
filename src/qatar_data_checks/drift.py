@@ -24,6 +24,7 @@ from .checks import blank, typed
 from .text import as_text
 
 EPS = 1e-4  # stands in for an empty bin, so the logarithm stays finite
+FEW = 10
 
 
 def psi(expected, actual) -> float:
@@ -81,7 +82,8 @@ def compare(reference: pd.DataFrame, current: pd.DataFrame, columns=None, bins: 
         if a.empty or b.empty:
             out.append(ColumnDrift(str(name), "-", None, "-", None, None, rates, "skipped", "no values in one version"))
             continue
-        if pd.api.types.is_numeric_dtype(a) and pd.api.types.is_numeric_dtype(b) and not pd.api.types.is_bool_dtype(a):
+        numeric = pd.api.types.is_numeric_dtype(a) and pd.api.types.is_numeric_dtype(b) and not pd.api.types.is_bool_dtype(a)
+        if numeric and a.nunique() > FEW:  # a handful of numbers, such as a year, is compared as categories
             x, y = a.to_numpy(float), b.to_numpy(float)
             value = psi(*numeric_bins(x, y, bins))
             ks = stats.ks_2samp(x, y)

@@ -47,6 +47,7 @@ def test_range_reasons(orders):
     r = run(orders, "range", "amount", min=0, max=100)
     assert r.failed == 3
     assert r.details == {"above 100": 1, "below 0": 1, "not a number": 1}
+    assert run(pd.DataFrame({"x": ["1,250.50"]}), "range", "x", max=2000).passed
 
 
 def test_range_with_dates():
@@ -113,6 +114,9 @@ def test_one_value_per():
     df = pd.DataFrame({"text": ["good", "good", "bad", "ok"], "label": ["1", "-1", "-1", "0"]})
     r = run(df, "one_value_per", "label", key="text")
     assert r.failed == 2
+    names = pd.DataFrame({"code": ["001", "001", "002"], "ar": ["الأغذية والمشروبات", "الأغذية  والمشروبات", "التبغ"]})
+    assert run(names, "one_value_per", "ar", key="code").failed == 2
+    assert run(names, "one_value_per", "ar", key="code", normalize=True).passed
 
 
 def test_missing_column_fails_with_hint(orders):

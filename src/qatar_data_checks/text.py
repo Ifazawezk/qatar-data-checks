@@ -51,6 +51,14 @@ def as_text(value) -> str:
     return str(value)
 
 
+_GROUPING = re.compile(r"(?<=[0-9]),(?=[0-9]{3}(?![0-9]))")
+
+
+def ungroup(text: str) -> str:
+    """1,250.50 becomes 1250.50."""
+    return _GROUPING.sub("", text)
+
+
 def shorten(text: str, limit: int = 80) -> str:
     text = " ".join(str(text).split())
     return text if len(text) <= limit else text[: limit - 3] + "..."

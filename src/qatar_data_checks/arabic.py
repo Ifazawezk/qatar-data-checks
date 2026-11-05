@@ -110,7 +110,7 @@ def script(values, frame, ctx, expect="arabic", min_share=0.5):
         share = script_share(as_text(v), expect)
         if share is None:
             return "no letters"
-        return f"{share:.0%} {expect} letters" if share < min_share else ""
+        return f"under {min_share:.0%} {expect} letters" if share < min_share else ""
 
     return values.map(problem).astype(object)
 

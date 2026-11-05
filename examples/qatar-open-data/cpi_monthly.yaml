@@ -1,0 +1,18 @@
+# Consumer price index by expenditure group, monthly, 2020 to 2025.
+# Qatar Open Data Portal (data.gov.qa), National Planning Council, CC BY 4.0,
+# downloaded 2026-11-04 with fetch.py. lshhr is the Arabic month, lmjmw the Arabic group.
+dataset: Qatar CPI by group, monthly (data.gov.qa)
+table:
+  - missing_dates: {columns: [year, month], format: "%Y-%b", freq: M, by: group_code}
+  - duplicate_timestamps: {columns: [year, month], format: "%Y-%b", by: group_code}
+columns:
+  group_code:
+    - regex: "[0-9]{3}"
+  group:
+    - one_value_per: group_code
+  lmjmw:
+    - one_value_per: group_code
+    - arabic_text: {severity: warn}
+  cpi_index:
+    - range: {min: 1, max: 500}  # tobacco sits at 227 to 246 on the 2018 base
+    - outliers: {by: group_code, severity: warn}

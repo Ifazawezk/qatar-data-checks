@@ -1,0 +1,22 @@
+# Generated customers of a made-up Doha shop. Headers are Arabic on purpose.
+dataset: customers (generated)
+table:
+  - row_count: {min: 1}
+columns:
+  رقم_العميل: [not_null, unique]
+  رقم_الهوية:
+    - not_null
+    - unique
+    - qatar_id
+  الاسم:
+    - not_null
+    - script: arabic
+    - arabic_text: {severity: warn}
+  الهاتف:
+    - qatar_phone: {kind: mobile}
+  المدينة:
+    - allowed: [الدوحة, الريان, الوكرة, الخور, أم صلال, الظعاين, الشمال, الشحانية]
+  إجمالي_المشتريات:
+    - qar_amount
+  تاريخ_التسجيل:
+    - range: {min: 2024-01-01}

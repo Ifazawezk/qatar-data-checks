@@ -41,7 +41,7 @@ def test_qatar_id_options():
         ("7712-3456", "mobile", ""),
         ("4444 1234", "landline", ""),
         ("800 1234", "toll_free", ""),
-        ("+974 2512 3456", None, "starts with 2, not a mobile (3, 5, 6, 7) or landline (4) prefix"),
+        ("+974 2512 3456", None, "prefix 2 is not used for mobile (3, 5, 6, 7) or landline (4)"),
         ("5512345", None, "7 digits, expected 8"),
         ("+974 ٥٥١٢٣٤٥٦", None, "Arabic-Indic digits"),
         ("call me", None, "not a phone number"),

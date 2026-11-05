@@ -1,0 +1,15 @@
+# Generated daily orders, December 2025 to April 2026, across Ramadan 1447.
+dataset: daily orders (generated)
+table:
+  - missing_dates: {column: date}
+  - duplicate_timestamps: {column: date}
+columns:
+  orders:
+    - outliers: {name: outliers (plain), severity: warn}
+    - outliers:
+        name: outliers (calendar)
+        date: date
+        exclude: [ramadan, eid, holidays]
+        split_weekend: true
+  revenue_qar:
+    - qar_amount

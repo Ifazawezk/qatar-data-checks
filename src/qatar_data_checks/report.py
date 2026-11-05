@@ -14,13 +14,13 @@ def _where(result) -> str:
 
 
 def _details(details: dict) -> str:
-    return ", ".join(f"{k} {v}" for k, v in details.items())
+    return "; ".join(f"{k}: {v}" for k, v in details.items())
 
 
 def _sample(sample: dict) -> str:
     head = f"row {sample['row']}: " if sample.get("row") is not None else ""
     tail = f"  ({sample['reason']})" if sample.get("reason") else ""
-    return f"{head}{sample['value']}{tail}"
+    return f"{head}{sample['value'] or '(blank)'}{tail}"
 
 
 def _summary(report: Report) -> str:
@@ -47,7 +47,7 @@ def to_text(report: Report, samples: int = 3) -> str:
         if r.passed:
             continue
         pad = " " * 6
-        if r.details:
+        if len(r.details) > 1:  # one reason is already clear from the samples
             lines.append(pad + _details(r.details))
         lines += [pad + _sample(s) for s in r.samples[:samples]]
     lines += ["", _summary(report)]

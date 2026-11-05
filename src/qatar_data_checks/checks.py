@@ -17,7 +17,7 @@ from typing import Any, Callable
 import pandas as pd
 
 from .readers import read_table
-from .text import as_text, canonical, shorten
+from .text import as_text, canonical, shorten, ungroup
 
 SEVERITIES = ("error", "warn")
 
@@ -292,7 +292,7 @@ def value_range(values, frame, ctx, min=None, max=None, exclusive=False):
         numbers = pd.to_datetime(values.map(as_text), errors="coerce")
         kind = "not a date"
     else:
-        numbers = pd.to_numeric(values.map(lambda v: as_text(v).strip()), errors="coerce")
+        numbers = pd.to_numeric(values.map(lambda v: ungroup(as_text(v).strip())), errors="coerce")
         kind = "not a number"
     reasons = pd.Series("", index=values.index, dtype=object)
     reasons[numbers.isna()] = kind
@@ -344,10 +344,13 @@ def references(values, frame, ctx, path, column=None):
 
 
 @register("one_value_per", describe="keys that map to more than one value", main="key")
-def one_value_per(values, frame, ctx, key):
+def one_value_per(values, frame, ctx, key, normalize=False):
     """Each key has a single value in this column, for example one label per
-    comment text. Every row of a conflicting key fails."""
+    comment text. Every row of a conflicting key fails. `normalize` ignores
+    differences in spacing, tatweel, invisible marks and Unicode form."""
     keys = [resolve_column(frame, k) for k in columns_of(key)]
+    if normalize:
+        values = values.map(lambda v: canonical(as_text(v)))
     data = pd.concat([hashable(frame.loc[values.index, k]) for k in keys] + [hashable(values)], axis=1)
     data.columns = [f"k{i}" for i in range(len(keys))] + ["v"]
     counts = data.groupby([f"k{i}" for i in range(len(keys))], dropna=False)["v"].transform("nunique")

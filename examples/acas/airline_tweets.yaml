@@ -1,0 +1,14 @@
+# Checks for the English airline tweets in ACAS's evaluation set
+# (advanced_comment_analysis/data/eval/airline/Tweets.csv, downloaded by evaluate_analyzer.py).
+dataset: ACAS airline tweets
+columns:
+  tweet_id: [not_null, unique]
+  text:
+    - not_null
+    - unique: {name: duplicate comments, severity: warn}
+    - script: {expect: latin, min_share: 0.5}
+  airline_sentiment:
+    - allowed: [negative, neutral, positive]
+    - one_value_per: {key: text, name: one label per comment}
+  airline_sentiment_confidence:
+    - range: {min: 0, max: 1}

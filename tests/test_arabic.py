@@ -59,4 +59,4 @@ def test_script_share():
 def test_script_check():
     df = pd.DataFrame({"text": ["رائع جدا", "great service", "!!!"]})
     r = Check("script", "text", {"expect": "arabic"}).run(df)
-    assert r.failed == 2 and r.details == {"0% arabic letters": 1, "no letters": 1}
+    assert r.failed == 2 and r.details == {"under 50% arabic letters": 1, "no letters": 1}

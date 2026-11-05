@@ -66,8 +66,9 @@ def duplicate_timestamps(frame, _, ctx, column=None, columns=None, format=None, 
     dates = parse_dates(frame, column, columns, format)
     key = pd.concat([frame[_groups(frame, by)], dates.rename("__date")], axis=1)
     bad = key.duplicated(keep=False) & dates.notna()
+    shown = _groups(frame, by) + [resolve_column(frame, c) for c in (columns or [column])]
     samples = [
-        {"row": int(i) + 1, "value": shorten(", ".join(as_text(v) for v in key.loc[i]))} for i in bad[bad].index[: ctx.samples]
+        {"row": int(i) + 1, "value": shorten(", ".join(as_text(frame.at[i, c]) for c in shown))} for i in bad[bad].index[: ctx.samples]
     ]
     return {"failed": int(bad.sum()), "total": len(frame), "samples": samples}
 
