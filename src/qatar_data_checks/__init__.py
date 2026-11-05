@@ -1,5 +1,5 @@
 """Declarative data quality checks for pandas DataFrames."""
-from . import qatar  # noqa: F401  (registers the Qatar checks)
+from . import arabic, qatar  # noqa: F401  (these modules register their checks)
 from .checks import REGISTRY, Check, ConfigError, Context, Result, register
 from .readers import ReadError, read_table
 from .suite import Report, Suite
